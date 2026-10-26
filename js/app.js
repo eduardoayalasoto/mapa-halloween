@@ -81,6 +81,9 @@ function agruparPorCalle(casas) {
     ]);
 }
 
+// En la página se muestra "Paseo" en vez de "P.º".
+const nombreVisible = (calle) => calle.replace(/^P\.º\s*/, "Paseo ");
+
 function textoContador(total) {
   return total === 1 ? '🎃 1 casa da dulces' : `🎃 ${total} casas dan dulces`;
 }
@@ -94,7 +97,7 @@ function renderLista(casas) {
       seccion.className = 'calle';
 
       const titulo = document.createElement('h3');
-      titulo.textContent = calle;
+      titulo.textContent = nombreVisible(calle);
 
       const chips = document.createElement('div');
       chips.className = 'chips';
@@ -118,9 +121,9 @@ function crearChip(casa) {
     const marca = document.createElement('small');
     marca.textContent = 'por ubicar';
     chip.append(marca);
-    chip.setAttribute('aria-label', `${casa.calle} ${casa.numero}, por ubicar`);
+    chip.setAttribute('aria-label', `${nombreVisible(casa.calle)} ${casa.numero}, por ubicar`);
   } else {
-    chip.setAttribute('aria-label', `Ver ${casa.calle} ${casa.numero} en el mapa`);
+    chip.setAttribute('aria-label', `Ver ${nombreVisible(casa.calle)} ${casa.numero} en el mapa`);
     chip.addEventListener('click', () => irACasa(casa));
   }
   return chip;
@@ -130,7 +133,7 @@ function contenidoPopup(casa) {
   const div = document.createElement('div');
   const direccion = document.createElement('div');
   direccion.className = 'popup-direccion';
-  direccion.textContent = `${casa.calle} ${casa.numero}`;
+  direccion.textContent = `${nombreVisible(casa.calle)} ${casa.numero}`;
   div.append(direccion);
   if (casa.referencia) {
     const ref = document.createElement('div');
