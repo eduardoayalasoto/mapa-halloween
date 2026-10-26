@@ -152,6 +152,22 @@
       "lat": 19.5080446,
       "lng": -99.2541636,
       "referencia": ""
+    },
+    {
+      "id": "paz-22",
+      "calle": "P.º de la Paz",
+      "numero": "22",
+      "lat": 19.5055847,
+      "lng": -99.2557526,
+      "referencia": ""
+    },
+    {
+      "id": "san-agustin-31",
+      "calle": "P.º San Agustín",
+      "numero": "31",
+      "lat": 19.5085743,
+      "lng": -99.2530347,
+      "referencia": ""
     }
   ]
 }
