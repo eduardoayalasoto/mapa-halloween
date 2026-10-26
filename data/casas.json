@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-26",
+  "actualizado": "2026-10-27",
   "casas": [
     {
       "id": "altena-19",
@@ -111,6 +111,38 @@
       "numero": "5",
       "lat": 19.508155,
       "lng": -99.252871,
+      "referencia": ""
+    },
+    {
+      "id": "altena-70",
+      "calle": "P.º de la Alteña",
+      "numero": "70",
+      "lat": null,
+      "lng": null,
+      "referencia": ""
+    },
+    {
+      "id": "paz-7",
+      "calle": "P.º de la Paz",
+      "numero": "7",
+      "lat": null,
+      "lng": null,
+      "referencia": ""
+    },
+    {
+      "id": "san-jacinto-8",
+      "calle": "P.º San Jacinto",
+      "numero": "8",
+      "lat": null,
+      "lng": null,
+      "referencia": ""
+    },
+    {
+      "id": "loreto-1",
+      "calle": "De Loreto",
+      "numero": "1",
+      "lat": null,
+      "lng": null,
       "referencia": ""
     }
   ]
