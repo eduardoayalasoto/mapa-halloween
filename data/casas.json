@@ -13,8 +13,8 @@
       "id": "altena-37",
       "calle": "P.º de la Alteña",
       "numero": "37",
-      "lat": 19.507451,
-      "lng": -99.254123,
+      "lat": 19.5072704,
+      "lng": -99.2541752,
       "referencia": ""
     },
     {
@@ -109,8 +109,8 @@
       "id": "loreto-5",
       "calle": "De Loreto",
       "numero": "5",
-      "lat": 19.508155,
-      "lng": -99.252871,
+      "lat": 19.5084525,
+      "lng": -99.2529378,
       "referencia": ""
     },
     {
@@ -183,6 +183,14 @@
       "numero": "45",
       "lat": 19.5087352,
       "lng": -99.252236,
+      "referencia": ""
+    },
+    {
+      "id": "altena-82",
+      "calle": "P.º de la Alteña",
+      "numero": "82",
+      "lat": 19.5083161,
+      "lng": -99.2524628,
       "referencia": ""
     }
   ]
