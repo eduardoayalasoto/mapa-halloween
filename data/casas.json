@@ -1,19 +1,117 @@
 {
   "actualizado": "2026-10-26",
   "casas": [
-    { "id": "altena-19", "calle": "P.º de la Alteña", "numero": "19", "lat": null, "lng": null, "referencia": "" },
-    { "id": "altena-37", "calle": "P.º de la Alteña", "numero": "37", "lat": null, "lng": null, "referencia": "" },
-    { "id": "altena-59", "calle": "P.º de la Alteña", "numero": "59", "lat": 19.5079629, "lng": -99.252649, "referencia": "Esquina con De Loreto" },
-    { "id": "altena-69", "calle": "P.º de la Alteña", "numero": "69", "lat": null, "lng": null, "referencia": "" },
-    { "id": "altena-77", "calle": "P.º de la Alteña", "numero": "77", "lat": null, "lng": null, "referencia": "" },
-    { "id": "altena-80", "calle": "P.º de la Alteña", "numero": "80", "lat": null, "lng": null, "referencia": "" },
-    { "id": "paz-16", "calle": "P.º de la Paz", "numero": "16", "lat": null, "lng": null, "referencia": "" },
-    { "id": "san-agustin-1", "calle": "P.º San Agustín", "numero": "1", "lat": null, "lng": null, "referencia": "" },
-    { "id": "san-agustin-5", "calle": "P.º San Agustín", "numero": "5", "lat": null, "lng": null, "referencia": "" },
-    { "id": "san-agustin-8", "calle": "P.º San Agustín", "numero": "8", "lat": null, "lng": null, "referencia": "" },
-    { "id": "san-agustin-22", "calle": "P.º San Agustín", "numero": "22", "lat": null, "lng": null, "referencia": "" },
-    { "id": "san-agustin-43", "calle": "P.º San Agustín", "numero": "43", "lat": null, "lng": null, "referencia": "" },
-    { "id": "san-jacinto-41", "calle": "P.º San Jacinto", "numero": "41", "lat": null, "lng": null, "referencia": "" },
-    { "id": "loreto-5", "calle": "De Loreto", "numero": "5", "lat": null, "lng": null, "referencia": "" }
+    {
+      "id": "altena-19",
+      "calle": "P.º de la Alteña",
+      "numero": "19",
+      "lat": 19.507142,
+      "lng": -99.254971,
+      "referencia": ""
+    },
+    {
+      "id": "altena-37",
+      "calle": "P.º de la Alteña",
+      "numero": "37",
+      "lat": 19.507451,
+      "lng": -99.254123,
+      "referencia": ""
+    },
+    {
+      "id": "altena-59",
+      "calle": "P.º de la Alteña",
+      "numero": "59",
+      "lat": 19.5079629,
+      "lng": -99.252649,
+      "referencia": "Esquina con De Loreto"
+    },
+    {
+      "id": "altena-69",
+      "calle": "P.º de la Alteña",
+      "numero": "69",
+      "lat": 19.508844,
+      "lng": -99.251563,
+      "referencia": ""
+    },
+    {
+      "id": "altena-77",
+      "calle": "P.º de la Alteña",
+      "numero": "77",
+      "lat": 19.508505,
+      "lng": -99.251165,
+      "referencia": ""
+    },
+    {
+      "id": "altena-80",
+      "calle": "P.º de la Alteña",
+      "numero": "80",
+      "lat": 19.508316,
+      "lng": -99.251006,
+      "referencia": ""
+    },
+    {
+      "id": "paz-16",
+      "calle": "P.º de la Paz",
+      "numero": "16",
+      "lat": 19.506129,
+      "lng": -99.256066,
+      "referencia": ""
+    },
+    {
+      "id": "san-agustin-1",
+      "calle": "P.º San Agustín",
+      "numero": "1",
+      "lat": 19.507619,
+      "lng": -99.254068,
+      "referencia": ""
+    },
+    {
+      "id": "san-agustin-5",
+      "calle": "P.º San Agustín",
+      "numero": "5",
+      "lat": 19.507779,
+      "lng": -99.254126,
+      "referencia": ""
+    },
+    {
+      "id": "san-agustin-8",
+      "calle": "P.º San Agustín",
+      "numero": "8",
+      "lat": 19.507806,
+      "lng": -99.25423,
+      "referencia": ""
+    },
+    {
+      "id": "san-agustin-22",
+      "calle": "P.º San Agustín",
+      "numero": "22",
+      "lat": 19.508328,
+      "lng": -99.253685,
+      "referencia": ""
+    },
+    {
+      "id": "san-agustin-43",
+      "calle": "P.º San Agustín",
+      "numero": "43",
+      "lat": 19.508988,
+      "lng": -99.252636,
+      "referencia": ""
+    },
+    {
+      "id": "san-jacinto-41",
+      "calle": "P.º San Jacinto",
+      "numero": "41",
+      "lat": 19.506495,
+      "lng": -99.254575,
+      "referencia": ""
+    },
+    {
+      "id": "loreto-5",
+      "calle": "De Loreto",
+      "numero": "5",
+      "lat": null,
+      "lng": null,
+      "referencia": ""
+    }
   ]
 }
