@@ -24,11 +24,11 @@ const MARGEN_GRADOS = 0.003; // ~330 m alrededor de La Alteña para no cortar ca
 // el script lo marca como "sin coincidencias" y puedes ajustar la regex aquí.
 const CALLES = {
   'P.º de la Alteña': /alte[nñ]a/i,
-  'P.º San Agustín': /san\s+agust[ií]n/i,
+  'P.º San Agustín': /(san|s\.)\s*agust[ií]n/i,
   'De Loreto': /loreto/i,
   'Pl. del Carmen': /carmen/i,
   'P.º de la Paz': /\bpaz\b/i,
-  'P.º San Jacinto': /san\s+jacinto/i,
+  'P.º San Jacinto': /(san|s\.)\s*jacinto/i,
 };
 
 const OVERPASS_URLS = [
@@ -97,14 +97,28 @@ out geom;`;
   );
 }
 
+// Acepta el JSON crudo de Overpass (elements) o el GeoJSON que exporta overpass-turbo (features).
+function viasDesdeRespuesta(respuesta) {
+  if (respuesta.features) {
+    return respuesta.features
+      .filter((f) => f.geometry?.type === 'LineString' && f.properties?.name)
+      .map((f) => ({ id: f.id, nombreOSM: f.properties.name, coords: f.geometry.coordinates }));
+  }
+  return (respuesta.elements ?? [])
+    .filter((v) => v.type === 'way' && v.geometry && v.tags?.name)
+    .map((v) => ({
+      id: v.id,
+      nombreOSM: v.tags.name,
+      coords: v.geometry.map((p) => [p.lon, p.lat]),
+    }));
+}
+
 function agruparVias(respuesta) {
   const grupos = Object.fromEntries(Object.keys(CALLES).map((nombre) => [nombre, []]));
-  for (const vía of respuesta.elements ?? []) {
-    if (vía.type !== 'way' || !vía.geometry || !vía.tags?.name) continue;
+  for (const vía of viasDesdeRespuesta(respuesta)) {
     for (const [nombre, regex] of Object.entries(CALLES)) {
-      if (regex.test(vía.tags.name)) {
-        const coords = vía.geometry.map((p) => [p.lon, p.lat]);
-        grupos[nombre].push({ id: vía.id, nombreOSM: vía.tags.name, coords });
+      if (regex.test(vía.nombreOSM)) {
+        grupos[nombre].push(vía);
         break;
       }
     }
