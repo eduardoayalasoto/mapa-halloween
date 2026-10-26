@@ -192,6 +192,14 @@
       "lat": 19.5083161,
       "lng": -99.2524628,
       "referencia": ""
+    },
+    {
+      "id": "altena-88",
+      "calle": "P.º de la Alteña",
+      "numero": "88",
+      "lat": 19.5085642,
+      "lng": -99.2521224,
+      "referencia": ""
     }
   ]
 }
