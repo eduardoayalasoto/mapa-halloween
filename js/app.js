@@ -157,6 +157,19 @@ function irACasa(casa) {
   mapa.once('moveend', () => abrirPopup(casa));
 }
 
+// Encuadra todas las casas ubicadas y sube al mapa (en celular, el mapa queda arriba de la lista).
+function verTodas(casas) {
+  const ubicadas = casas.filter(tieneUbicacion);
+  if (!mapa || ubicadas.length === 0) return;
+  const lngs = ubicadas.map((c) => c.lng);
+  const lats = ubicadas.map((c) => c.lat);
+  mapa.fitBounds(
+    [[Math.min(...lngs), Math.min(...lats)], [Math.max(...lngs), Math.max(...lats)]],
+    { padding: 50, maxZoom: 18, duration: 800 },
+  );
+  $('#mapa').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function mostrarErrorMapa() {
   const aviso = document.createElement('div');
   aviso.className = 'mapa-error';
@@ -328,6 +341,7 @@ async function iniciar() {
   }
 
   renderLista(datos.casas);
+  $('#ver-todas').addEventListener('click', () => verTodas(datos.casas));
 
   try {
     await iniciarMapa(zona, datos.casas);

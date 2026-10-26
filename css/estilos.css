@@ -117,6 +117,27 @@ body {
   color: var(--naranja);
 }
 
+.ver-todas {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  margin-bottom: 14px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--naranja);
+  color: #1E1838;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ver-todas:focus-visible {
+  outline: 3px solid var(--texto);
+  outline-offset: 2px;
+}
+
 .lista {
   display: grid;
   gap: 14px;
