@@ -145,6 +145,15 @@ function construirZona(grupos) {
   const unidos = union(featureCollection(poligonos));
   // Simplificar un poco para que el archivo pese poco en celular; la forma se conserva.
   const suavizado = simplify(unidos, { tolerance: 0.000003, highQuality: true });
+  // Quitar los huecos: son manzanas rodeadas por calles, dentro de la zona, y no deben oscurecerse.
+  const contornos =
+    suavizado.geometry.type === 'Polygon'
+      ? [suavizado.geometry.coordinates]
+      : suavizado.geometry.coordinates;
+  const sinHuecos = contornos.map(([exterior]) => [exterior]);
+  suavizado.geometry = sinHuecos.length === 1
+    ? { type: 'Polygon', coordinates: sinHuecos[0] }
+    : { type: 'MultiPolygon', coordinates: sinHuecos };
   suavizado.properties = { nombre: 'Zona La Alteña' };
   return featureCollection([suavizado]);
 }
