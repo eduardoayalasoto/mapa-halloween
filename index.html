@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>¡Halloween en La Alteña!</title>
+  <meta name="description" content="¿Dónde daremos dulces el 31 de octubre? Mapa de las casas de La Alteña, Naucalpan.">
+  <meta name="theme-color" content="#1E1838">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Halloween en La Alteña">
+  <meta property="og:title" content="¡Halloween en La Alteña!">
+  <meta property="og:description" content="¿Dónde daremos dulces el 31 de octubre? Mapa de las casas de La Alteña, Naucalpan.">
+  <meta property="og:url" content="https://eduardoayalasoto.github.io/mapa-halloween/">
+  <meta property="og:image" content="https://eduardoayalasoto.github.io/mapa-halloween/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="img/calabaza.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Shrikhand&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.13.0/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="marco">
+    <header class="encabezado">
+      <div class="titulo">
+        <h1>¡Halloween<br>en La Alteña!</h1>
+        <p class="subtitulo">¿Dónde daremos dulces el 31 de octubre?</p>
+      </div>
+      <svg class="luna" viewBox="0 0 120 120" role="img" aria-label="Luna llena con murciélagos">
+        <circle cx="60" cy="62" r="36" fill="#FFDDA6"/>
+        <g fill="#1E1838">
+          <path transform="translate(60 52) scale(1.15)" d="M0,-4 C-3,-8 -9,-8 -12,-3 C-14,-6 -18,-6 -20,-3 C-17,0 -14,2 -12,8 C-8,4 -4,4 0,6 C4,4 8,4 12,8 C14,2 17,0 20,-3 C18,-6 14,-6 12,-3 C9,-8 3,-8 0,-4 Z"/>
+          <path transform="translate(92 22) scale(.45)" d="M0,-4 C-3,-8 -9,-8 -12,-3 C-14,-6 -18,-6 -20,-3 C-17,0 -14,2 -12,8 C-8,4 -4,4 0,6 C4,4 8,4 12,8 C14,2 17,0 20,-3 C18,-6 14,-6 12,-3 C9,-8 3,-8 0,-4 Z"/>
+          <path transform="translate(104 44) scale(.3)" d="M0,-4 C-3,-8 -9,-8 -12,-3 C-14,-6 -18,-6 -20,-3 C-17,0 -14,2 -12,8 C-8,4 -4,4 0,6 C4,4 8,4 12,8 C14,2 17,0 20,-3 C18,-6 14,-6 12,-3 C9,-8 3,-8 0,-4 Z"/>
+        </g>
+      </svg>
+    </header>
+
+    <main class="contenido">
+      <section class="mapa-wrap" aria-label="Mapa de casas">
+        <div id="mapa" class="mapa"></div>
+      </section>
+
+      <section class="lista-wrap" aria-labelledby="contador">
+        <h2 id="contador" class="contador">🎃 Cargando casas…</h2>
+        <div id="lista" class="lista"></div>
+      </section>
+    </main>
+  </div>
+
+  <noscript>Necesitas JavaScript para ver el mapa y la lista de casas.</noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

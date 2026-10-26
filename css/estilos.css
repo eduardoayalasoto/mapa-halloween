@@ -1,0 +1,231 @@
+:root {
+  --fondo: #1E1838;
+  --superficie: #241D45;
+  --texto: #F4ECFF;
+  --texto-secundario: #B9AEDB;
+  --naranja: #F7A21B;
+  --texto-chip: #FFDDA6;
+  --calle-zona: #A397D8;
+  --calle-fuera: #3B3366;
+  --avenida: #5E5498;
+  --etiqueta: #D9D1F5;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  padding:
+    env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+  min-height: 100svh;
+}
+
+.marco {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 12px 16px 24px;
+  min-height: 100svh;
+}
+
+/* Borde naranja con línea punteada interior */
+.marco::before {
+  content: "";
+  position: fixed;
+  inset: 6px;
+  border: 3px solid var(--naranja);
+  border-radius: 14px;
+  pointer-events: none;
+  z-index: 0;
+}
+.marco::after {
+  content: "";
+  position: fixed;
+  inset: 12px;
+  border: 1px dashed rgba(247, 162, 27, 0.55);
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 0;
+}
+.marco > * { position: relative; z-index: 1; }
+
+/* Encabezado */
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 4px 10px;
+}
+
+.titulo h1 {
+  margin: 0;
+  font-family: "Shrikhand", "Trebuchet MS", cursive;
+  font-weight: 400;
+  font-size: clamp(1.7rem, 7vw, 2.6rem);
+  line-height: 1.05;
+  color: var(--naranja);
+  text-shadow: 0 2px 0 #1E1838;
+}
+
+.subtitulo {
+  margin: 8px 0 0;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 3.6vw, 1.1rem);
+  color: var(--texto);
+}
+
+.luna {
+  flex: 0 0 auto;
+  width: 84px;
+  height: 84px;
+}
+
+/* Mapa: ~60% del alto visible en iPhone vertical */
+.mapa-wrap {
+  margin-top: 8px;
+}
+
+.mapa {
+  position: relative;
+  width: 100%;
+  height: 60svh;
+  min-height: 360px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--fondo);
+  border: 1px solid rgba(247, 162, 27, 0.35);
+}
+
+/* Lista */
+.lista-wrap {
+  margin-top: 18px;
+}
+
+.contador {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--naranja);
+}
+
+.lista {
+  display: grid;
+  gap: 14px;
+}
+
+.calle {
+  background: var(--superficie);
+  border: 1px solid rgba(163, 151, 216, 0.25);
+  border-radius: 12px;
+  padding: 12px 14px 14px;
+}
+
+.calle h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  min-width: 48px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--naranja);
+  background: rgba(247, 162, 27, 0.14);
+  color: var(--texto-chip);
+  font: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+.chip:focus-visible {
+  outline: 3px solid var(--texto);
+  outline-offset: 2px;
+}
+
+.chip:disabled {
+  cursor: default;
+  border-style: dashed;
+  border-color: var(--calle-fuera);
+  background: transparent;
+  color: var(--texto-secundario);
+  opacity: 0.65;
+}
+
+.chip small {
+  font-size: 0.68rem;
+  font-weight: 400;
+}
+
+/* Escritorio: mapa y lista lado a lado */
+@media (min-width: 900px) {
+  .contenido {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+  .mapa-wrap { margin-top: 0; position: sticky; top: 16px; }
+  .mapa { height: 78vh; }
+  .lista-wrap { margin-top: 0; }
+}
+
+/* Popup y controles del mapa */
+.maplibregl-popup-content {
+  background: var(--superficie);
+  color: var(--texto);
+  border: 1px solid var(--naranja);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+}
+.maplibregl-popup-close-button {
+  color: var(--texto);
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+}
+.popup-direccion { font-weight: 700; font-size: 1rem; color: var(--texto-chip); }
+.popup-ref { margin-top: 4px; font-size: 0.9rem; color: var(--texto-secundario); }
+
+.maplibregl-ctrl-group button {
+  width: 44px;
+  height: 44px;
+}
+
+.mapa-error {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  text-align: center;
+  color: var(--texto-secundario);
+}
+
+.maplibregl-ctrl-attrib {
+  font-size: 10px;
+}

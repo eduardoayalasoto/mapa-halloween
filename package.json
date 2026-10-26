@@ -5,7 +5,8 @@
   "description": "Mapa de casas que dan dulces en La Alteña (sitio estático, sin build)",
   "type": "module",
   "scripts": {
-    "zona": "node scripts/generar-zona.mjs"
+    "zona": "node scripts/generar-zona.mjs",
+    "validar": "node scripts/validar-casas.mjs"
   },
   "devDependencies": {
     "@turf/buffer": "7.4.0",
