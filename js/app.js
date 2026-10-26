@@ -210,8 +210,8 @@ function agregarCapas(zona, casas, primeraEtiqueta) {
     type: 'geojson',
     data: geojsonDeCasas(casas),
     cluster: true,
-    clusterMaxZoom: 17,
-    clusterRadius: 36,
+    clusterMaxZoom: 16,
+    clusterRadius: 20,
   });
   mapa.addLayer({
     id: 'casas-cluster',
