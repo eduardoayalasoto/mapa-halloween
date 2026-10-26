@@ -5,8 +5,8 @@
       "id": "altena-19",
       "calle": "P.º de la Alteña",
       "numero": "19",
-      "lat": 19.507142,
-      "lng": -99.254971,
+      "lat": 19.507013,
+      "lng": -99.2548646,
       "referencia": ""
     },
     {
@@ -53,8 +53,8 @@
       "id": "paz-16",
       "calle": "P.º de la Paz",
       "numero": "16",
-      "lat": 19.506129,
-      "lng": -99.256066,
+      "lat": 19.5061341,
+      "lng": -99.2560061,
       "referencia": ""
     },
     {
@@ -167,6 +167,22 @@
       "numero": "31",
       "lat": 19.5085743,
       "lng": -99.2530347,
+      "referencia": ""
+    },
+    {
+      "id": "altena-83",
+      "calle": "P.º de la Alteña",
+      "numero": "83",
+      "lat": 19.5085969,
+      "lng": -99.2517308,
+      "referencia": ""
+    },
+    {
+      "id": "san-agustin-45",
+      "calle": "P.º San Agustín",
+      "numero": "45",
+      "lat": 19.5087352,
+      "lng": -99.252236,
       "referencia": ""
     }
   ]
