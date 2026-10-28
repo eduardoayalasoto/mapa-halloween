@@ -200,6 +200,22 @@
       "lat": 19.5085642,
       "lng": -99.2521224,
       "referencia": ""
+    },
+    {
+      "id": "san-jacinto-47",
+      "calle": "P.º San Jacinto",
+      "numero": "47",
+      "lat": 19.5066703,
+      "lng": -99.2544713,
+      "referencia": ""
+    },
+    {
+      "id": "altena-18",
+      "calle": "P.º de la Alteña",
+      "numero": "18",
+      "lat": 19.5065986,
+      "lng": -99.2558047,
+      "referencia": ""
     }
   ]
 }
